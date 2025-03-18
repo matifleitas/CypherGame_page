@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cypher Gaming</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Cypher Gaming</title>
+</head>
+
+<body class="hidden">
+    <div class="centrado" id="preloader">
+        <div class="loader">
+            <div class="loading-text">Loading<span class="dot">.</span><span class="dot">.</span><span
+                    class="dot">.</span>
+            </div>
+            <div class="loading-bar-background">
+                <div class="loading-bar">
+                    <div class="white-bars-container">
+                        <div class="white-bar"></div>
+                        <div class="white-bar"></div>
+                        <div class="white-bar"></div>
+                        <div class="white-bar"></div>
+                        <div class="white-bar"></div>
+                        <div class="white-bar"></div>
+                        <div class="white-bar"></div>
+                        <div class="white-bar"></div>
+                        <div class="white-bar"></div>
+                        <div class="white-bar"></div>
+                    </div>
+                </div>
+            </div>
+            <span id="contador" class="cont">0%</span>
+        </div>
+
+    </div>
+    <header class="navbar">
+
+        <div class="nabvar-hamburguesa btn-hamburguesa">
+            <img class="nav-img-hamburguesa" src="../img/icono/Frame.svg" alt="btn">
+        </div>
+
+        <div class="navbar-contenedor-logo">
+            <div class="navbar-logo-img">
+                <a href=""> <img class="navbar-logo" src="../img/logo/logo.png" height="40rem" width="40rem"
+                        alt=" logo">
+                </a>
+            </div>
+            <div class="navbar-title"> <span class="span-title-logo">CYPHER GAMING</span> </div>
+        </div>
+
+        <div class="divLupa-mobileFirs">
+            <svg xmlns="http://www.w3.org/2000/svg" width="29" height="35" viewBox="0 0 20 20" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M9 3.50002C7.54131 3.50002 6.14236 4.07948 5.11091 5.11093C4.07946 6.14238 3.5 7.54133 3.5 9.00002C3.5 10.4587 4.07946 11.8577 5.11091 12.8891C6.14236 13.9206 7.54131 14.5 9 14.5C10.4587 14.5 11.8576 13.9206 12.8891 12.8891C13.9205 11.8577 14.5 10.4587 14.5 9.00002C14.5 7.54133 13.9205 6.14238 12.8891 5.11093C11.8576 4.07948 10.4587 3.50002 9 3.50002ZM2 9.00002C2.00009 7.88069 2.26861 6.7777 2.78303 5.78358C3.29745 4.78946 4.04276 3.9332 4.95645 3.28662C5.87015 2.64004 6.92557 2.22199 8.0342 2.06756C9.14282 1.91312 10.2723 2.0268 11.3279 2.39904C12.3836 2.77129 13.3345 3.39126 14.101 4.20694C14.8676 5.02262 15.4273 6.01022 15.7333 7.08691C16.0393 8.1636 16.0827 9.29798 15.8597 10.3949C15.6368 11.4918 15.154 12.5192 14.452 13.391L17.78 16.72C17.8537 16.7887 17.9128 16.8715 17.9538 16.9635C17.9948 17.0555 18.0168 17.1548 18.0186 17.2555C18.0204 17.3562 18.0018 17.4562 17.9641 17.5496C17.9264 17.643 17.8703 17.7278 17.799 17.7991C17.7278 17.8703 17.643 17.9264 17.5496 17.9641C17.4562 18.0019 17.3562 18.0204 17.2555 18.0186C17.1548 18.0168 17.0555 17.9948 16.9635 17.9538C16.8715 17.9128 16.7887 17.8537 16.72 17.78L13.391 14.452C12.3625 15.2804 11.1207 15.801 9.80901 15.9536C8.49727 16.1062 7.16912 15.8847 5.97795 15.3145C4.78677 14.7444 3.78117 13.849 3.07727 12.7316C2.37338 11.6143 1.99991 10.3206 2 9.00002Z"
+                    fill="#D9D9D9" />
+            </svg>
+        </div>
+
+        <div class="conteiner-lupa-loged">
+            <div class="nav-div-input">
+                <input class="nav-inputText" type="text" placeholder="Buscar juegos...">
+            </div>
+            <div class="nav-divLupa">
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+            </div>
+        </div>
+
+        <div class="header-right">
+            <div class="cart">
+                <img src="../assets/cart.svg" alt="cart" srcset="">
+                <span class="cart-cantItems hidden-items">items: 1</span>
+            </div>
+            <div class="userModal">
+                <img src="../assets/Avatar.png" alt="avatar">
+                <span>Usuario</span>
+            </div>
+            <div class="logOutIcon">
+                <a href="../index.html">
+                    <button class="Btn">
+
+                        <div class="sign"><svg viewBox="0 0 512 512">
+                                <path
+                                    d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z">
+                                </path>
+                            </svg></div>
+
+                        <div class="text">Salir</div>
+                    </button>
+
+
+
+                </a>
+            </div>
+
+        </div>
+    </header>
+    <main class="galery-game">
+        <!-- ---------------------------Toogle Menu--------------- -->
+
+        <nav class="vertical-nav-wrapper">
+
+            <div class="vertical-CategoriaNav">
+                <a class="link-hambur " href="">
+                    <img class="icon-hambur" src="../assets/home.svg" alt="Inicio">
+                    <span>Inicio</span>
+                </a>
+                <a class="link-hambur " href="">
+                    <img class="icon-hambur" src="../assets/reciente.svg" alt="recientes">
+                    <span>Recientes</span>
+                </a>
+                <a class="link-hambur " href="">
+                    <img class="icon-hambur" src="../assets/LoMasJugadores.svg" alt="lo mas buscados">
+                    <span>Lo mas buscados</span>
+                </a>
+                <hr class="hr-hambur">
+                <a class="link-hambur " href="">
+                    <img class="icon-hambur" src="../assets/multijugador.svg" alt="multijugador">
+                    <span>Multijugador</span>
+                </a>
+                <a class="link-hambur " href="">
+                    <img class="icon-hambur" src="../assets/accion.svg" alt="accion">
+                    <span>Acción</span>
+                </a>
+                <a class="link-hambur " href="">
+                    <img class="icon-hambur" src="../assets/deporte.svg" alt="deportes">
+                    <span>Deportes</span>
+                </a>
+                <a class="link-hambur " href="">
+                    <img class="icon-hambur" src="../assets/billar.svg" alt="billar">
+                    <span>Billar</span>
+                </a>
+                <a class="link-hambur " href="">
+                    <img class="icon-hambur" src="../assets/carta.svg" alt="cartas">
+                    <span>Cartas</span>
+                </a>
+                <a class="link-hambur " href="">
+                    <img class="icon-hambur" src="../assets/auto.svg" alt="autos">
+                    <span>Autos</span>
+                </a>
+                <a class="link-hambur " href="">
+                    <img class="icon-hambur" src="../assets/disparos.svg" alt="disparos">
+                    <span>Disparos</span>
+                </a>
+                <a class="link-hambur " href="">
+                    <img class="icon-hambur" src="../assets/arcade.svg" alt="arcades">
+                    <span>Arcades</span>
+                </a>
+                <a class="link-hambur " href="">
+                    <img class="icon-hambur" src="../assets/hallowen.svg" alt="hallowen">
+                    <span>Hallowen</span>
+                </a>
+                <a class="link-hambur " href="">
+                    <img class="icon-hambur" src="../assets/home.svg" alt="juegosMesa">
+                    <span>Juegos de Mesa</span>
+                </a>
+                <a class="link-hambur " href="">
+                    <img class="icon-hambur" src="../assets/terror.svg" alt="terror">
+                    <span>Terror</span>
+                </a>
+                <a class="link-hambur " href="">
+                    <img class="icon-hambur" src="../assets/pokemom.svg" alt="pokemon">
+                    <span>Pokemon</span>
+                </a>
+                <a class="link-hambur " href="">
+                    <img class="icon-hambur" width="40" src="../assets/cocinar.svg" alt="cocinar">
+                    <span>Cocinar</span>
+                </a>
+                <a class="link-hambur " href="">
+                    <img class="icon-hambur" src="../assets/payaso.svg" alt="">
+                    <span>Payaso</span>
+                </a>
+                <br>
+            </div>
+        </nav>
+
+        <!-- --------------CARRUSEL--------------- -->
+        <main class="galery-game">
+
+            <div class="conteiner-carruselPrimary">
+                <div class="carrusel-titulo">
+                    <h3 class="h2-carrusel">¡No te pierdas nuestros últimos lanzamientos!</h3>
+
+                    <div class="conteiner-btns">
+                        <div class="conteiner-btnDirection  left">
+                            <div class="btn-carrusel"> <img src="../assets/angle-left.svg" alt=""> </div>
+                        </div>
+                        <div class="conteiner-btnDirection  right">
+                            <div class="btn-carrusel"> <img src="../assets/angle-right.svg" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carrusel-primary">
+                    <div class="card-game cardGame"><a href="html/juego.html"> <img class="card-img-game"
+                                src="../img/card/batVsjoker.jpeg" alt=""></a>
+                    </div>
+                    <div class="card-game cardGameSecundary"> <img class="card-img-game"
+                            src="../img/card/candyCrush.png" alt="">
+                    </div>
+                    <div class="card-game cardPremium-game cardGameSecundary"> <img class="card-img-game" src="../img/card/minecra.jpg" alt="">
+                    </div>
+                    <div class="card-game cardGame"> <img class="card-img-game"
+                            src="../img/card/manorlords.jpg" alt="">
+                    </div>
+                    <div class="card-game cardPremium-game cardGameSecundary"> <img class="card-img-game" src="../img/card/napo.jpg" alt="">
+                    </div>
+                    <div class="card-game cardGame"> <img class="card-img-game" src="../img/card/chess.jpg" alt="">
+                    </div>
+                    <div class="card-game cardGame"> <img class="card-img-game" src="../img/card/anime.jpg" alt="">
+                    </div>
+                    <div class="card-game cardGame"> <img class="card-img-game" src="../img/card/washer.jpg" alt="">
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="conteiner-carruselPrimary">
+                <div class="carrusel-titulo">
+                    <h3 class="h2-carrusel">Populares</h3>
+                    
+                    <div class="conteiner-btns">
+                        <div class="conteiner-btnDirection  left">
+                            <div class="btn-carrusel"> <img src="../assets/angle-left.svg" alt=""> </div>
+                        </div>
+                        <div class="conteiner-btnDirection  right">
+                            <div class="btn-carrusel"> <img src="../assets/angle-right.svg" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carrusel-primary">
+                    <div class="card-game cardGameSecundary"> <img class="card-img-game" src="../img/card/ageOf.jpg"
+                            alt="">
+                    </div>
+                    <div class="card-game no-before cardGameSecundary" >
+                        <div class="cardSmall-game a"><img class="card-img-game-small" src="../img/card/forza.jpg"
+                                alt="">
+                        </div>
+                        <div class="cardSmall-game b"><img class="card-img-game-small" src="../img/card/washer.jpg"
+                                alt="">
+                        </div>
+                        <div class="cardSmall-game c"><img class="card-img-game-small" src="../img/card/nopainnogame.jpg"
+                                alt="">
+                        </div>
+                        <div class="cardSmall-game d"><img class="card-img-game-small" src="../img/card/diablov.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="card-game cardPremium-game cardGameSecundary"> <img class="card-img-game"
+                            src="../img/card/shellshockersio.jpg" alt=""></div>
+                    <div class="card-game no-before cardGameSecundary">
+                        <div class="cardSmall-game a"><img class="card-img-game-small" src="../img/card/chess.jpg"
+                                alt="">
+                        </div>
+                        <div class="cardSmall-game b"><img class="card-img-game-small" src="../img/card/washer.jpg"
+                                alt="">
+                        </div>
+                        <div class="cardSmall-game c"><img class="card-img-game-small" src="../img/card/batVsjoker.jpeg"
+                                alt="">
+                        </div>
+                        <div class="cardSmall-game d"><img class="card-img-game-small" src="../img/card/ageOf.jpg"
+                                alt="">
+                        </div>
+
+                    </div>
+                    <div class="card-game cardPremium-game cardGameSecundary"> <img class="card-img-game"
+                        src="../img/card/halibut.jpg" alt="">
+                    </div>
+                    <div class="card-game no-before cardGameSecundary">
+                        <div class="cardSmall-game a"><img class="card-img-game-small" src="../img/card/forza.jpg"
+                                alt="">
+                        </div>
+                        <div class="cardSmall-game b"><img class="card-img-game-small" src="../img/card/washer.jpg"
+                                alt="">
+                        </div>
+                        <div class="cardSmall-game c"><img class="card-img-game-small" src="../img/card/nopainnogame.jpg"
+                                alt="">
+                        </div>
+                        <div class="cardSmall-game d"><img class="card-img-game-small" src="../img/card/diablov.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                    <button class="btn-card-game-arrow  arrowRigth">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="62" height="45" viewBox="0 0 62 99" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M53.4778 56.4328L24.25 79.7679L16.9443 73.9352L42.5193 53.5164L16.9443 33.0976L24.25 27.2649L53.4778 50.6C54.4464 51.3736 54.9906 52.4226 54.9906 53.5164C54.9906 54.6102 54.4464 55.6592 53.4778 56.4328Z"
+                                fill="#9852A4" />
+                        </svg></button>
+                    <button class="btn-card-game-arrow  arrowLeft">
+                        <svg class="card-game-arrowL" xmlns="http://www.w3.org/2000/svg" width="62" height="45"
+                            viewBox="0 0 62 99" fill="none">
+                            <path class="arrow" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M53.4778 56.4328L24.25 79.7679L16.9443 73.9352L42.5193 53.5164L16.9443 33.0976L24.25 27.2649L53.4778 50.6C54.4464 51.3736 54.9906 52.4226 54.9906 53.5164C54.9906 54.6102 54.4464 55.6592 53.4778 56.4328Z"
+                                fill="#9852A4" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="conteiner-carruselPrimary">
+                <div class="carrusel-titulo">
+                    <h3 class="h2-carrusel">Para jugar con amigos</h3>
+                    <div class="conteiner-btns">
+                        <div class="conteiner-btnDirection  left">
+                            <div class="btn-carrusel"> <img src="../assets/angle-left.svg" alt=""> </div>
+                        </div>
+                        <div class="conteiner-btnDirection  right">
+                            <div class="btn-carrusel"> <img src="../assets/angle-right.svg" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carrusel-primary">
+                    <div class="card-game cardGame"> <img class="card-img-game"
+                            src="../img/card/cr.jpg" alt="">
+                    </div>
+                    <div class="card-game cardPremium-game cardGameSecundary"> <img class="card-img-game" src="../img/card/sub.png" alt="">
+                    </div>
+                    <div class="card-game cardPremium-game cardGameSecundary"> <img class="card-img-game" src="../img/card/marvekl.jpg" alt="">
+                    </div>
+                    <div class="card-game cardGame"> <img class="card-img-game" src="../img/card/cartas.png" alt="">
+                    </div>
+                    <div class="card-game cardGame"> <img class="card-img-game" src="../img/card/planet.jpg" alt="">
+                    </div>
+                    <div class="card-game cardGame"> <img class="card-img-game" src="../img/card/assasin.jpg" alt="">
+                    </div>
+                    <button class="btn-card-game-arrow  arrowRigth">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="62" height="45" viewBox="0 0 62 99" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M53.4778 56.4328L24.25 79.7679L16.9443 73.9352L42.5193 53.5164L16.9443 33.0976L24.25 27.2649L53.4778 50.6C54.4464 51.3736 54.9906 52.4226 54.9906 53.5164C54.9906 54.6102 54.4464 55.6592 53.4778 56.4328Z"
+                                fill="#9852A4" />
+                        </svg></button>
+                    <button class="btn-card-game-arrow  arrowLeft">
+                        <svg class="card-game-arrowL" xmlns="http://www.w3.org/2000/svg" width="62" height="45"
+                            viewBox="0 0 62 99" fill="none">
+                            <path class="arrow" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M53.4778 56.4328L24.25 79.7679L16.9443 73.9352L42.5193 53.5164L16.9443 33.0976L24.25 27.2649L53.4778 50.6C54.4464 51.3736 54.9906 52.4226 54.9906 53.5164C54.9906 54.6102 54.4464 55.6592 53.4778 56.4328Z"
+                                fill="#9852A4" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="conteiner-carruselPrimary">
+                <div class="carrusel-titulo">
+                    <h3 class="h2-carrusel">Clasicos</h3>
+                    <div class="conteiner-btns">
+                        <div class="conteiner-btnDirection  left">
+                            <div class="btn-carrusel"> <img src="../assets/angle-left.svg" alt=""> </div>
+                        </div>
+                        <div class="conteiner-btnDirection  right">
+                            <div class="btn-carrusel"> <img src="../assets/angle-right.svg" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carrusel-primary">
+                    <div class="card-game cardGameSecundary"> <img class="card-img-game" src="../img/card/poke.jpg"
+                            alt="">
+                    </div>
+                    <div class="card-game no-before cardGameSecundary">
+                        <div class="cardSmall-game a"><img class="card-img-game-small" src="../img/card/test2.jpg"
+                                alt="">
+                        </div>
+                        <div class="cardSmall-game b"><img class="card-img-game-small" src="../img/card/ml2.png" alt="">
+                        </div>
+                        <div class="cardSmall-game c"><img class="card-img-game-small" src="../img/card/cc.jpg" alt="">
+                        </div>
+                        <div class="cardSmall-game d"><img class="card-img-game-small"
+                                src="../img/card/preguntados.png " alt="">
+                        </div>
+                    </div>
+                    <div class="card-game cardGameSecundary"> <img class="card-img-game"
+                            src="../img/card/candyCrush.png" alt=""></div>
+                    <div class="card-game no-before cardGameSecundary">
+                        <div class="cardSmall-game a"><img class="card-img-game-small" src="../img/card/street.png"
+                                alt="">
+                        </div>
+                        <div class="cardSmall-game b"><img class="card-img-game-small" src="../img/card/diablov.jpg"
+                                alt="">
+                        </div>
+                        <div class="cardSmall-game c"><img class="card-img-game-small" src="../img/card/washer.jpg"
+                                alt="">
+                        </div>
+                        <div class="cardSmall-game d"><img class="card-img-game-small" src="../img/card/nfl.jpg" alt="">
+                        </div>
+                    
+                    </div>
+                    <div class="card-game cardPremium-game cardGameSecundary"> <img class="card-img-game" src="../img/card/napo.jpg"
+                        alt="">
+                    </div>
+                        <div class="card-game no-before cardGameSecundary">
+                        <div class="cardSmall-game a"><img class="card-img-game-small" src="../img/card/chess.jpg" alt="">
+                        </div>
+                        <div class="cardSmall-game b"><img class="card-img-game-small" src="../img/card/washer.jpg"
+                                alt="">
+                        </div>
+                        <div class="cardSmall-game c"><img class="card-img-game-small" src="../img/card/batVsjoker.jpeg"
+                                alt="">
+                        </div>
+                        <div class="cardSmall-game d"><img class="card-img-game-small" src="../img/card/ageOf.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                    <button class="btn-card-game-arrow  arrowRigth">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="62" height="45" viewBox="0 0 62 99" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M53.4778 56.4328L24.25 79.7679L16.9443 73.9352L42.5193 53.5164L16.9443 33.0976L24.25 27.2649L53.4778 50.6C54.4464 51.3736 54.9906 52.4226 54.9906 53.5164C54.9906 54.6102 54.4464 55.6592 53.4778 56.4328Z"
+                                fill="#9852A4" />
+                        </svg></button>
+                    <button class="btn-card-game-arrow  arrowLeft">
+                        <svg class="card-game-arrowL" xmlns="http://www.w3.org/2000/svg" width="62" height="45"
+                            viewBox="0 0 62 99" fill="none">
+                            <path class="arrow" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M53.4778 56.4328L24.25 79.7679L16.9443 73.9352L42.5193 53.5164L16.9443 33.0976L24.25 27.2649L53.4778 50.6C54.4464 51.3736 54.9906 52.4226 54.9906 53.5164C54.9906 54.6102 54.4464 55.6592 53.4778 56.4328Z"
+                                fill="#9852A4" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <section class="footer-logo">
+                <img src="../assets/logo.jfif" alt="CypherGaming Logo" class="logo-pag">
+                <p>
+                    <span class="word-1">CYPHER</span>
+                    <span class="word-2">GAMING</span>
+                </p>
+            </section>
+            <section class="footer-links">
+                <div class="footer-column">
+                    <h4>Categorías</h4>
+                    <ul>
+                        <li><a href="#">Lanzamientos</a></li>
+                        <li><a href="#">Ofertas</a></li>
+                        <li><a href="#">Próximos</a></li>
+                        <li><a href="#">Top 100 juegos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Mi cuenta</h4>
+                    <ul>
+                        <li><a href="#">Logros</a></li>
+                        <li><a href="#">Informe</a></li>
+                        <li><a href="#">Historial de compra</a></li>
+                        <li><a href="#">Registro de transacciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Acerca de nosotros</h4>
+                    <ul>
+                        <li><a href="#">Nuestra historia</a></li>
+                        <li><a href="#">Equipo de trabajo</a></li>
+                        <li><a href="#">Misión y visión</a></li>
+                        <li><a href="#">Contáctanos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Ayuda</h4>
+                    <ul>
+                        <li><a href="#">Soporte</a></li>
+                        <li><a href="#">Problema de comunicación</a></li>
+                        <li><a href="#">Preguntas Frecuentes (FAQ)</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Comunidad</h4>
+                    <ul>
+                        <li><a href="#">Foros</a></li>
+                        <li><a href="#">Noticias de la comunidad</a></li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="#"><img src="../assets/facebook.svg" alt="Facebook"></a>
+                        <a href="#"><img src="../assets/twitter.svg" alt="Twitter Icon"></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </footer>
+    <script src="../preloader.js"></script>
+    <script src="../js/js.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,2 @@
+CLASS PARA TENER CARRITO MAS PRECIO = card-game cardPremium-game cardGameSecundary;
+CLASS PARA TENER JUGAR GRATIS SOLO = card-game cardGame;

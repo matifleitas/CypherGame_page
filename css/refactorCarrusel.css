@@ -1,0 +1,639 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap');
+
+:root {
+    --shadow-primary: #622D6B;
+    --shadow-secundary: #7B4386;
+    --primary-color: #9852A4;
+    --ligth-primary: #B371C1;
+    --ligth-primary-2: #D199E1;
+
+    --black-background-: #070606;
+    --dark-gray: #333;
+    --dark-shddow: #4F4F4F;
+    --blackish: #767676;
+    --gray: #B0AAAA;
+
+    --white: #FFFFFF;
+
+    --font-baloo: 'Baloo Bhai', cursive;
+
+    --h1: 18px;
+    --h2: 16px;
+    --h3: 14px;
+    --txt-body: 12px;
+    --txt-no-bold: 10px;
+    --txt-tittle-canva-game: 28px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-baloo);
+}
+
+/* -------------------------Header--------------------- */
+.navbar {
+    width: 100%;
+    height: 4.5rem;
+    background-color: var(--black-background-);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    .nabvar-hamburguesa {
+        width: 5%;
+        height: 3rem;
+        padding: 5px 20px 0px 20px;
+
+        .nav-link-hamb {
+
+            .nav-img-hamburguesa {
+                width: 25px;
+                height: 40px;
+            }
+        }
+    }
+
+    .navbar-contenedor-logo {
+        width: 10%;
+        height: 40px;
+        display: flex;
+        margin-right: 5%;
+
+        .navbar-logo-img {
+            width: 100%;
+
+            .navbar-logo {
+                border: 2px solid wheat;
+                border-radius: 10px;
+            }
+        }
+
+        .navbar-title {
+            color: white;
+        }
+    }
+
+    .conteiner-lupa {
+        border: 2px solid var(--gray);
+        color: white;
+        border-radius: 30px;
+        height: 40px;
+        width: 28%;
+        margin-right: 5%;
+        /* Buscar otra forma de espaciar */
+        display: flex;
+
+        .nav-div-input {
+            width: 90%;
+            padding-left: 5%;
+        }
+
+        .nav-inputText {
+            width: 100%;
+            height: 1.8rem;
+            background-color: var(--black-background-);
+            border: 2px solid black;
+        }
+
+        .nav-divLupa {
+            margin-left: 10px;
+        }
+    }
+
+    .conteiner-user {
+        margin-right: 2%;
+        margin-left: 10%;
+        width: 130px;
+          
+        .btn-sesion {
+            padding: 5px 5px;
+            text-transform: uppercase;
+            border-radius: 80px;
+            font-size: var(--h3);
+            /*font-weight: var(--h3);*/
+            color: var(--white);
+            text-shadow: none;
+            background: var(--primary-color);
+            cursor: pointer;
+            box-shadow: transparent;
+            border: 1px solid var(--primary-color);
+            transition: 0.5s ease;
+            user-select: none;
+            width: 130px;
+            height: 40px;
+          }
+          
+          #btn-sesion:hover,
+          :focus {
+            color: var(--white);
+            background: var(--primary-color);
+            border: 0.5px solid var(--primary-color);
+            text-shadow: 0 0 0.5px var(--white), 0 0 1px var(--white), 0 0 2.5px var(--white);
+            box-shadow: 0 0 1px var(--primary-color), 0 0 2.5px var(--primary-color), 0 0 2px var(--primary-color),
+              0 0 20px var(--ligth-primary);
+          }
+          
+    }
+}
+
+/* ---------------------------Main--------------------- */
+.galery-game {
+    background-color: var(--dark-gray);
+    /*height: 100vh;*/
+
+    .conteiner-carruselPrimary {
+        padding-top: 15px;
+        width: 100%;
+        height: 52%;
+        margin-left: 2%;
+        overflow: hidden;
+
+        .carrusel-titulo {
+
+            .h2-carrusel {
+                font-size: 1rem;
+                color: #fff;
+                margin-left: 1px;
+            }
+        }
+
+        .carrusel-primary {
+            margin-top: 10px;
+            display: flex;
+            position: relative;
+            height: 80%;
+            margin: 10px;
+
+            .card-game {
+                /* max-width: 25rem; */
+
+                .card-img-game {
+                    cursor: pointer;
+                    width: 409px;
+                    height: 230px;
+                    margin-left: 0.5rem;
+                    object-fit: cover;
+                    border-radius: 8px;
+                    /* border-image: fill 0 linear-gradient(#0001, #000);  Es para poner gradient abaajo y resalte el txt */
+                }
+            }
+
+
+            .cardGameSecundary {
+                width: auto;
+                display: grid;
+                height: 100%;
+                gap: 4px;
+                grid-template-areas:
+                    "a b"
+                    "c d";
+
+                .a, .b, .c, .d {
+                    margin: 4px; /* Asegúrate de que no haya márgenes adicionales */
+                    padding: 0 4px;
+                }
+            
+                .cardSmall-game {
+                    margin: 0px; /* Elimina márgenes adicionales en los "cards" */
+                    padding: 4px;
+                    height: 109px;
+                    .card-img-game-small {
+                        object-fit: cover;
+                        width: 200px;
+                        height: 108px; /* Mantener una altura consistente */
+                        cursor: pointer;
+                    }
+                }
+            }
+
+
+            .btn-card-game-arrow {
+                background-color: #130f0f0a;
+                border: 0;
+
+                .card-game-arrowL {
+                    transform: rotate(540deg);
+                    margin-top: 16px;
+                }
+            }
+
+            .arrowRigth {
+                position: absolute;
+                bottom: 0;
+                top: 0;
+                cursor: pointer;
+            }
+
+            .arrowLeft {
+                left: 2%;
+            }
+
+            .arrowRigth {
+                right: 2%;
+            }
+
+            .arrowLeft:active,
+            .arrowRigth:active {
+                background-color: rgba(128, 128, 128, 0.295);
+            }
+
+            .arrowLeft:hover,
+            .arrowRigth:hover {
+                transform: scale(1.4);
+
+            }
+        }
+    }
+}
+
+/*MOBILE*/
+@media only screen and (max-width: 414px) {
+    .login-container{
+        position: fixed;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+        background-color: #07060600;
+        border: none;
+    }
+
+    .login-box{
+        background-color: black;
+        padding: 32px;
+        border-radius: 50px;
+        width: 360px;
+        text-align: center;
+    }
+
+
+    .sesion-text {
+        color: var(--white);
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .inputs {
+        width: 100%;
+        padding: 8px;
+        margin: 10px 0;
+        border-radius: 75px; 
+        border: none;
+        font-size: 20px;
+    }
+
+    
+    .btn-sesion {
+        width: 110px; 
+        height: 35px; 
+        font-size: calc(var(--h3) - 2px); 
+        padding: 4px 4px;
+    }
+    
+    #btn-sesion:hover,
+    :focus {
+        text-shadow: 0 0 0.8px var(--white), 0 0 0.18px var(--white), 0 0 4px var(--white);
+        box-shadow: 0 0 0.16px var(--primary-color), 0 0 4px var(--primary-color), 0 0 3px var(--primary-color),
+            0 0 25px var(--ligth-primary);
+    }
+    
+
+    .btn-primary {
+        background-color: var(--primary-color); 
+        color: white;
+        padding: 10px;
+        width: 60%;
+        border-radius: 65px;
+        border: none;
+        cursor: pointer;
+        margin: 10px 0;
+        font-size: 20px;
+        transition: background-color 0s ease, transform 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: var(--shadow-primary); 
+        transform: scale(1.03); 
+    }
+
+    
+    .social-login {
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        margin: 10px 0;
+    }
+
+    .txt-login{
+        flex-grow: 1;
+        background-color:
+        var(--white); border: 
+        none; height: 1px;
+    }
+
+    .txt-login2{
+        font-size: 17px;
+        padding: 5px;
+    }
+
+    .img-social {
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+    }
+
+    .register {
+        color: var(--white);
+        margin: 5px 0;
+    }
+}
+/* -----------------------------------------Sesion Login------------------------------------ */
+
+
+/*DESKTOP*/
+@media only screen and (min-width: 415px) {
+    .login-container {
+        position: fixed;
+        top:50%;
+        margin-bottom: 30px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        justify-content: center;
+        align-items: center;
+        background-color: #07060600;
+        border: none;
+       
+    }
+
+    .login-box {
+        height: 100%;
+        background-color: var(--black-background-);
+        padding: 35px;
+        border-radius: 12px;
+        box-shadow: var(--black-background-);
+        width: 400px;
+        max-width: 100%;
+        text-align: center;
+        border-radius: 50px;
+    }
+
+    .sesion-text {
+        color: var(--white);
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .inputs {
+        width: 100%;
+        padding: 8px;
+        margin: 10px 0;
+        border-radius: 75px; 
+        border: none;
+        font-size: 16px;
+    }
+
+    .btn-primary {
+        background-color: var(--primary-color);
+        color: var(--white);
+        padding: 12px;
+        width: 60%;
+        border-radius: 65px;
+        border: none;
+        cursor: pointer;
+        margin: 10px 0;
+        font-size: 16px;
+        transition: background-color 0s ease, transform 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: var(--shadow-primary);
+        transform: scale(1.04);
+    }
+
+    .social-login {
+        align-items: center;
+        justify-content: center;
+        color: white;
+        margin: 15px 0;
+    }
+
+    
+    .img-social {
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+    }
+
+    .register {
+        color: rgb(153, 108, 108);
+        margin: 8px 0;
+    }
+
+    .txt-login2 {
+        color: var(--white);
+    }
+
+    .date-birthdate{
+        border-radius: 8px;
+    }
+
+/* preloader de la pagina */ 
+    .loader {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 5px;
+    }
+  
+    .loading-text {
+        color: white;
+        font-size: 14pt;
+        font-weight: 600;
+        margin-left: 10px;
+    }
+
+    .dot {
+        margin-left: 3px;
+        animation: blink 1.5s infinite;
+    }
+    .dot:nth-child(2) {
+        animation-delay: 0.3s;
+    }
+
+    .dot:nth-child(3) {
+        animation-delay: 0.6s;
+    }
+
+    .loading-bar-background {
+        --height: 30px;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 5px;
+        width: 200px;
+        height: var(--height);
+        background-color: #212121 /*change this*/;
+        box-shadow: #0c0c0c -2px 2px 4px 0px inset;
+        border-radius: calc(var(--height) / 2);
+    }
+
+    .loading-bar {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        --height: 20px;
+        width: 0%;
+        height: var(--height);
+        overflow: hidden;
+        background: rgb(222, 74, 15);
+        background: linear-gradient(
+            0deg,
+            rgba(222, 74, 15, 1) 0%,
+            rgba(249, 199, 79, 1) 100%
+        );
+        border-radius: calc(var(--height) / 2);
+        animation: loading 4s ease-out infinite;
+    }
+
+    .white-bars-container {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .white-bar {
+        background: rgb(255, 255, 255);
+        background: linear-gradient(
+            -45deg,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 0) 70%
+    );
+        width: 10px;
+        height: 45px;
+        opacity: 0.3;
+        rotate: 45deg;
+    }
+
+    @keyframes loading {
+    0% {
+        width: 0;
+    }
+    80% {
+        width: 100%;
+    }
+    100% {
+        width: 100%;
+    }
+    }
+
+    @keyframes blink {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    }
+
+    .hidden{
+        overflow: hidden;
+    }
+
+    .centrado{
+        background-color: var(--black-background-);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }  
+}
+/* ------------------------Footer------------------------- */
+
+footer {
+    padding: 20px 40px;
+    background-color: var(--dark-shddow);
+    color: #fff;
+}
+
+.footer-logo {
+    flex: 1;
+    padding: 10px;
+    border-bottom: 1px solid var(--white);
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.word-1,
+.word-2 {
+    display: block;
+    margin-left: 12px;
+}
+
+.logo-pag {
+    width: 4.5vw;
+    height: auto;
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 10px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-column {
+    padding: 10px;
+}
+
+.footer-column h4 {
+    margin-top: 29px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-column li {
+    margin-top: 12px;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+}
+
