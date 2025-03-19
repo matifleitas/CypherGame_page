@@ -89,14 +89,22 @@ document.querySelector('.btn-hamburguesa').addEventListener(
         }
     })
 
-// cardPremium.addEventListener("click", () => {
-//     cartCantItems.classList.remove("hidden-items");
-// })
+    document.querySelector(".form-singin").addEventListener("submit", function (event) {
+        let password = document.getElementById("password");
 
-// btnPlay.addEventListener("click",()=>{
-//     portadaJuego.classList.remove('mostrarJuego');
-//     portadaJuego.classList.add('taparJuego');
+        if(!password.checkValidity()){
+            event.preventDefault(); //evita que el formulario se envie
+            password.reportValidity();
+        }
+    });
 
-//     fondoJuego.classList.remove('taparJuego');
-//     fondoJuego.classList.add('mostrarJuego');;
-// })
+     document.querySelector(".form-singup").addEventListener("submit", function (event) {
+         let passwordRegister = document.getElementById("passwordRegister");
+         let passwordRegister2 = document.getElementById("passwordRegister2");
+
+         if(!passwordRegister.checkValidity() || !passwordRegister2.checkValidity()){
+            event.preventDefault(); //evita que el formulario se envie
+            passwordpasswordRegister.reportValidity();
+            passwordpasswordRegister2.reportValidity();
+         } 
+     });

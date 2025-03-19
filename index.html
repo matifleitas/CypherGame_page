@@ -91,9 +91,16 @@
                 </div>
                 <form class="form-singin" action="#" method="POST">
                     <input class="inputs" type="email" name="email" placeholder="Ingrese su correo" required>
-                    <input class="inputs" type="password" name="password" placeholder="Ingrese su contraseña" required>
-                    <button class="btn" type="submit" popovertarget="id-popover"><a href="html/indexLoged.html">Iniciar
-                            Sesión</a></button>
+                    
+                    <input class="inputs" 
+                           type="password" 
+                           id="password"
+                           name="password" 
+                           pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W_]).{8,}$" 
+                           placeholder="Ingrese su contraseña" 
+                           title="Debe tener al menos 8 caracteres, una mayúscula, una minúscula, un número y un carácter especial." 
+                           required>                    
+                    <button class="btn" type="submit">Iniciar Sesión</button>
                 </form>
 
                 <div class="social-login">
@@ -132,8 +139,14 @@
                             required>
                         <input class="inputs" type="password" name="password" placeholder="Ingrese su contraseña"
                             required>
-                        <input class="inputs" type="password" name="password" placeholder="Confirme su contraseña"
-                            required>
+                            <input class="inputs" 
+                            type="password" 
+                            id="password"
+                            name="password" 
+                            pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W_]).{8,}$" 
+                            placeholder="Ingrese su contraseña" 
+                            title="Debe tener al menos 8 caracteres, una mayúscula, una minúscula, un número y un carácter especial." 
+                            required>   
                         <input class="inputs" required="" placeholder="Enter birth date" type="date">
                         <button class="btn" type="submit" id="id-popover"><a
                                 href="https://matifleitas.github.io/Interfaces-Grupo33/TP2/EntregaFinal/html/indexLoged.html">Registrarse</a></button>
