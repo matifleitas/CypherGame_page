@@ -1349,7 +1349,7 @@ footer {
 
   .photo-game img {
     width: 93%;
-    height: 95vh;
+    height: 80vh;
     filter: blur(1px);
     border-radius: 8px;
   }
